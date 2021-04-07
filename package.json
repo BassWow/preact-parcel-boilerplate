@@ -1,0 +1,61 @@
+{
+  "private": true,
+  "name": "preact-test",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "parcel:serve": "parcel serve --no-source-maps --no-cache src/index.html",
+    "parcel:build": "parcel build --no-source-maps --no-cache src/index.html",
+    "clean": "rm -rf dist .cache",
+    "build": "npm-run-all -s clean parcel:build",
+    "start": "npm-run-all -s clean -p parcel:serve"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-transform-react-jsx": "^7.13.12",
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "@heroicons/react": "^1.0.0",
+    "@parcel/babel-plugin-transform-runtime": "^2.0.0-nightly.1823",
+    "autoprefixer": "^10.2.5",
+    "eslint": "^7.23.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "parcel": "^2.0.0-beta.2",
+    "postcss": "^8.2.9",
+    "postcss-cli": "^8.3.1",
+    "postcss-fontpath": "^1.0.0",
+    "preact": "^10.5.13",
+    "preact-compat": "^3.19.0",
+    "preact-router": "^3.2.1",
+    "tailwindcss": "^2.1.1",
+    "yarn-run-all": "^3.1.1"
+  },
+  "alias": {
+    "react": "preact/compat",
+    "react-dom/test-utils": "preact/test-utils",
+    "react-dom": "preact/compat"
+  },
+  "browserslist": [
+    "> 0.2%",
+    "not dead"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-react-jsx",
+        {
+          "pragma": "h",
+          "pragmaFrag": "Fragment"
+        },
+        "@babel/plugin-transform-runtime"
+      ]
+    ]
+  }
+}
