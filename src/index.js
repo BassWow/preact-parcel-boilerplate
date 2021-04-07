@@ -14,13 +14,13 @@ const Home = () => (
       <BigHeading>
         Welcome to the Parcel | PREACT | TaildwindCSS Boilerplate!
       </BigHeading>
-      <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4 dark:bg-gray-800 my-10">
-        <div className="flex-shrink-0">
-          <BeakerIcon className="h-20 w-20 text-red-300" />
+      <div tw="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4 dark:bg-gray-800 my-10">
+        <div tw="flex-shrink-0">
+          <BeakerIcon tw="h-20 w-20 text-red-300" />
         </div>
         <div>
-          <h1 className="text-3xl font-medium text-white">Boilerplate</h1>
-          <p className="text-gray-300">Let's get started!</p>
+          <h1 tw="text-3xl font-medium text-white">Boilerplate</h1>
+          <p tw="text-gray-300">Let's get started!</p>
         </div>
       </div>
     </div>
