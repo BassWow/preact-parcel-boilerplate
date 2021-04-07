@@ -5,7 +5,7 @@ module.exports = {
   },
   purge: {
     enabled: false,
-    content: ["./src/**/*.html", "./src/**/*.js"],
+    content: ["./public/**/*.html", "./src/**/*.js"],
   },
   darkMode: "media",
   theme: {
