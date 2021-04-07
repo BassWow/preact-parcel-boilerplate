@@ -1,13 +1,19 @@
 import { h, render } from "preact";
 import { Router } from "preact-router";
 import { BeakerIcon } from "@heroicons/react/solid";
-import tw, { styled } from "twin.macro"
+import tw, { styled } from "twin.macro";
 
-//const BigHeading = 
+const BigHeading = styled.h1`
+  ${tw`text-2xl font-mono subpixel-antialiased font-bold text-center text-black`}
+`;
+
+//const BigHeading =
 const Home = () => (
-  <div className="container mx-auto flex items-center justify-center h-screen font-mono">
-    <div className="mx-auto">
-      <h1 tw="text-2xl font-mono subpixel-antialiased font-bold text-center text-red-700">Welcome to the Parcel | PREACT | TaildwindCSS Boilerplate!</h1>
+  <div tw="container mx-auto flex items-center justify-center h-screen font-mono">
+    <div className="m-auto">
+      <BigHeading>
+        Welcome to the Parcel | PREACT | TaildwindCSS Boilerplate!
+      </BigHeading>
       <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4 dark:bg-gray-800 my-10">
         <div className="flex-shrink-0">
           <BeakerIcon className="h-20 w-20 text-red-300" />
