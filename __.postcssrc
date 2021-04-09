@@ -1,0 +1,15 @@
+{
+    "plugins": {
+        "@fullhuman/postcss-purgecss": {
+            "content": [
+                
+                "**/*.html",
+                "**/*.js",
+                "**/*.css",
+                "**/*.svg"
+            ]
+        },
+        "autoprefixer": {},
+        "cssnano": {}
+    }
+}
