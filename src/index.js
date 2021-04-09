@@ -1,16 +1,45 @@
 import { h, render } from "preact";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { Router } from "preact-router";
-//import { useState } from "preact/hooks";
-import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.css' // Import precompiled Bootstrap css
-import '@fortawesome/fontawesome-free/css/all.css'
-
+import { useState } from "preact/hooks";
 import { Cards, Card } from "./components/Cards";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import { StopwatchFill } from "react-bootstrap-icons";
 
+
+
+import "./styles/index.css";
 
 const Home = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <div>
+      <div className="container mt-5">
+        <Button variant="primary" onClick={handleShow}>
+          Launch demo modal
+        </Button>
+
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleClose}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
       <Cards>
         <Card>
           <div className="card__image">
@@ -51,15 +80,15 @@ const Home = () => {
           <div className="card__links">
             <ul>
               <li>
-                <i className="fas fa-user-edit fa-lg"></i>
+                <StopwatchFill />
               </li>
 
               <li>
-                <i className="fas fa-biking fa-lg"></i>
+                <StopwatchFill />
               </li>
 
               <li>
-                <i className="fas fa-calendar-alt fa-lg"></i>
+                <StopwatchFill />
               </li>
             </ul>
           </div>

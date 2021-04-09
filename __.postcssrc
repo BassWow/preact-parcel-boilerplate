@@ -1,15 +1,19 @@
 {
+    "modules": false,
     "plugins": {
-        "@fullhuman/postcss-purgecss": {
+        "purgecss": {
             "content": [
-                
-                "**/*.html",
-                "**/*.js",
-                "**/*.css",
-                "**/*.svg"
+                "src/**/*.css",
+                "src/**/*.html",
+                "src/**/*.js",
+                "public/*.html"
             ]
-        },
-        "autoprefixer": {},
-        "cssnano": {}
+        }
     }
 }
+
+
+
+module.exports = {
+    plugins: ["@fullhuman/postcss-purgecss"]
+  };

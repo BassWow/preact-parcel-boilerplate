@@ -1,13 +1,11 @@
 module.exports = {
   plugins: {
-    "@fullhuman/postcss-purgecss": {
-      content: [
-        "**/*.html",
-        "**/*.css",
-        "**/*.js",
-      ],
-    },
     autoprefixer: {},
-    cssnano: { preset: "default" },
+    cssnano: {},
+    "@fullhuman/postcss-purgecss": {
+      content: ["src/**/*.js", "public/**/*.html"],
+      css: ["src/**/*.css"],
+      output: "public/",
+    },
   },
 };

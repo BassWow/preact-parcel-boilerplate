@@ -1,4 +1,5 @@
 module.exports = {
-  content: ["**/*.html","**/*.js"],
-  fontFace: true,
+  content: ["dist/**/*.js", "dist/**/*.html"],
+  css: ["dist/**/*.css"],
+  output: "dist/",
 };
