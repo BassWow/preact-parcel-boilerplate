@@ -1,3 +1,3 @@
-# preact-parcel-boilerplate
+# preact-parcel-tailwind-boilerplate
 
 Starting point for all projects
