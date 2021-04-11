@@ -1,5 +1,5 @@
 import { h, render } from "preact";
-import styled from "styled-components";
+import {styled} from "twin.macro";
 
 
 const StyledCards = styled.div`
@@ -9,7 +9,7 @@ const StyledCards = styled.div`
 `;
 
 const StyledCard = styled.div`
-  flex-basis: 400px;
+flex: 1;
   background-color: #efefef;
   border: 1px solid #eee;
   margin: 30px;
@@ -61,17 +61,13 @@ const StyledCard = styled.div`
     display: flex;
     height: 100%;
     align-items: center;
+    text-align: center;
     justify-content: space-evenly;
   }
 
   .card__links ul > li {
-    flex: 1;
-    text-align: center;
-  }
 
-  .card__links img {
-    max-width: 30px;
-    height: auto;
+    text-align: center;
   }
 
   .card__links i {
