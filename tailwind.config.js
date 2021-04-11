@@ -4,8 +4,8 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   purge: {
-    enabled: false,
-    content: ["./src/**/*.html", "./src/**/*.js"],
+    enabled: true,
+    content: ["./public/**/*.html", "/src/**/*.html", "./src/**/*.js"],
   },
   darkMode: "media",
   theme: {

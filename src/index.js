@@ -1,7 +1,5 @@
 import { h, render } from "preact";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import { Router } from "preact-router";
 import { useState } from "preact/hooks";
 import { Cards, Card } from "./components/Cards";

@@ -1,6 +1,7 @@
 {
-  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "presets": ["preact"],
   "plugins": [
+    "babel-plugin-macros",
     [
       "@babel/plugin-transform-react-jsx",
       {
