@@ -1,6 +1,5 @@
 import { h, render } from "preact";
-import {styled} from "twin.macro";
-
+import { styled } from "twin.macro";
 
 const StyledCards = styled.div`
   display: flex;
@@ -9,7 +8,7 @@ const StyledCards = styled.div`
 `;
 
 const StyledCard = styled.div`
-flex: 1;
+  flex: 1;
   background-color: #efefef;
   border: 1px solid #eee;
   margin: 30px;
@@ -66,7 +65,6 @@ flex: 1;
   }
 
   .card__links ul > li {
-
     text-align: center;
   }
 
@@ -76,7 +74,7 @@ flex: 1;
 `;
 
 export const Cards = (p) => {
-  return <StyledCards>{p.children}</StyledCards>
+  return <StyledCards>{p.children}</StyledCards>;
 };
 
 export const Card = (p) => {

@@ -1,76 +1,24 @@
 import { h, render } from "preact";
 import { Router } from "preact-router";
 import tw, { styled } from "twin.macro";
+import NavBar from "./components/NavBar";
 import { Cards, Card } from "./components/Cards";
 import { StopIcon, BeakerIcon } from "@heroicons/react/solid";
 const BigHeading = styled.h1`
-  ${tw`text-2xl font-sans subpixel-antialiased font-bold text-center text-black`}
+  ${tw`text-2xl font-inter subpixel-antialiased font-bold text-center text-black`}
 `;
-
 const Home = () => (
-  <div class="w-screen dark:bg-gray-900">
+  <div class="w-screen dark:bg-gray-900 font-inter">
+    <NavBar />
     <div class="container mx-auto">
       <section class="pb-20">
-        <nav class="flex justify-between items-center py-8 px-4 xl:px-10 text-gray-200">
-          <a class="text-lg font-semibold" href="#">
-            <img
-              class="h-7"
-              src="zeus-assets/logo/logo-zeus-red.svg"
-              alt=""
-              width="auto"
-            />
-          </a>
-          <div class="lg:hidden">
-            <button class="navbar-burger flex items-center p-3 hover:bg-gray-50 rounded">
-              <svg
-                class="block h-4 w-4"
-                viewbox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Mobile menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-              </svg>
-            </button>
-          </div>
-          <ul class="hidden lg:flex lg:ml-auto lg:mr-12 lg:items-center lg:w-auto lg:space-x-12">
-            <li>
-              <a class="text-sm font-medium" href="#">
-                <BeakerIcon />
-                About
-              </a>
-            </li>
-            <li>
-              <a class="text-sm font-medium" href="#">
-                Company
-              </a>
-            </li>
-            <li>
-              <a class="text-sm font-medium" href="#">
-                Services
-              </a>
-            </li>
-            <li>
-              <a class="text-sm font-medium" href="#">
-                Testimonials
-              </a>
-            </li>
-          </ul>
-          <div class="hidden lg:block">
-            <a
-              class="inline-block py-3 px-8 text-sm leading-normal font-medium bg-red-50 hover:bg-green-100 text-green-500 rounded transition duration-200"
-              href="#"
-            >
-              Contact Us
-            </a>
-          </div>
-        </nav>
         <div class="container px-4 mx-auto pt-12">
-          <div class="flex flex-wrap items-center -mx-4">
+          <div class="flex flex-wrap items-center mx-4">
             <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
               <span class="font-semibold text-xs text-green-400">
                 What&apos;s new at Shuffle
               </span>
-              <h2 class="mt-8 mb-6 lg:mb-12 text-4xl lg:text-5xl text-gray-200 font-semibold">
+              <h2 class="mt-8 mb-6 lg:mb-12 text-4xl lg:text-5xl text-gray-200 font-extrabold font-inter">
                 Take care of your performance every day.
               </h2>
               <div class="max-w-lg mb-6 lg:mb-12">
@@ -88,7 +36,7 @@ const Home = () => (
                   Track your performance
                 </a>
                 <a
-                  class="inline-block px-6 py-4 mb-3 text-sm font-medium leading-normal hover:text-gray-300 rounded border text-gray-200"
+                  class="inline-block px-6 py-4 mb-3 text-sm font-bold leading-normal hover:text-gray-300 rounded border text-gray-200"
                   href="#"
                 >
                   Learn More
@@ -194,9 +142,12 @@ const Home = () => (
             </div>
           </nav>
         </div>
+        <section>
+          <figure class="shadow-lg rounded-xl flex-none w-80 md:w-xl" style="transform: rotate(1deg) translateZ(0px);"><blockquote class="rounded-t-xl bg-white px-6 py-8 md:p-10 text-lg md:text-xl leading-8 md:leading-8 font-semibold text-gray-900"><svg width="45" height="36" class="mb-5 fill-current text-light-blue-100"><path d="M13.415.001C6.07 5.185.887 13.681.887 23.041c0 7.632 4.608 12.096 9.936 12.096 5.04 0 8.784-4.032 8.784-8.784 0-4.752-3.312-8.208-7.632-8.208-.864 0-2.016.144-2.304.288.72-4.896 5.328-10.656 9.936-13.536L13.415.001zm24.768 0c-7.2 5.184-12.384 13.68-12.384 23.04 0 7.632 4.608 12.096 9.936 12.096 4.896 0 8.784-4.032 8.784-8.784 0-4.752-3.456-8.208-7.776-8.208-.864 0-1.872.144-2.16.288.72-4.896 5.184-10.656 9.792-13.536L38.183.001z"></path></svg><p>There's one thing that sucks about @tailwindcss - once you’ve used it on a handful of projects it is a real pain in the ass to write normal CSS again.</p></blockquote><figcaption class="flex items-center space-x-4 p-6 md:px-10 md:py-6 bg-gradient-to-br rounded-b-xl leading-6 font-semibold text-white from-light-blue-400 to-indigo-500"><div class="flex-none w-14 h-14 bg-white rounded-full flex items-center justify-center"><img src="/_next/static/media/graeme-houston.2c9612cba96f5f65e7a0ca86dc64c2fc.jpg" alt="" class="w-12 h-12 rounded-full bg-light-blue-100" loading="lazy" /></div><div class="flex-auto">Graeme Houston<br /><span class="text-light-blue-100">JavaScript Developer</span></div><cite class="flex"><a href="https://twitter.com/iamgraem_e/status/1322861404781748228?s=21" class="opacity-50 hover:opacity-75 transition-opacity duration-200"><span class="sr-only">Original tweet by Graeme Houston</span><svg width="33" height="32" fill="currentColor"><path d="M32.411 6.584c-1.113.493-2.309.826-3.566.977a6.228 6.228 0 002.73-3.437 12.4 12.4 0 01-3.944 1.506 6.212 6.212 0 00-10.744 4.253c0 .486.056.958.16 1.414a17.638 17.638 0 01-12.802-6.49 6.208 6.208 0 00-.84 3.122 6.212 6.212 0 002.762 5.17 6.197 6.197 0 01-2.813-.777v.08c0 3.01 2.14 5.52 4.983 6.091a6.258 6.258 0 01-2.806.107 6.215 6.215 0 005.803 4.312 12.464 12.464 0 01-7.715 2.66c-.501 0-.996-.03-1.482-.087a17.566 17.566 0 009.52 2.79c11.426 0 17.673-9.463 17.673-17.671 0-.267-.007-.536-.019-.803a12.627 12.627 0 003.098-3.213l.002-.004z"></path></svg></a></cite></figcaption></figure>
+        </section>
         <section class="bg-gray-900 py-20 ">
           <div class="container mx-auto border-gray-700 border px-10 py-10 rounded-lg">
-            <h2 class="mb-8 md:mb-16 text-4xl lg:text-6xl font-semibold font-heading text-white">
+            <h2 class="mb-8 md:mb-16 text-4xl lg:text-6xl font-bold font-inter text-white">
               Let's start something completely new together
             </h2>
             <div class="flex flex-wrap items-center">

@@ -9,16 +9,19 @@ module.exports = {
     enabled: false,
     content: ["./public/**/*.html", "./src/**/*.js"],
   },
-  fontFamily: {
-    quicksand: ["Quicksand"],
-  },
+
   darkMode: "media",
   theme: {
     container: {
       center: true,
     },
 
-    extend: {},
+    extend: {
+      fontFamily: {
+        quicksand: ["Quicksand"],
+        inter: ["Inter"],
+      },
+    },
   },
   variants: {
     extend: {},
