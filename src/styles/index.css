@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-@tailwind base; 
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
 @tailwind components;
-
-/* Add custom CSS heree! */
-
-
 @tailwind utilities;
+
+:root {
+    --primary: #0cd3a1;
+    --seconday: #0a7258;
+  }

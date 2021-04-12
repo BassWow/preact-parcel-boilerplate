@@ -1,17 +1,15 @@
 import { h, render } from "preact";
-import { styled } from "twin.macro";
+import tw, { styled } from "twin.macro";
 
 const StyledCards = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
+${tw`grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4 px-8`}
 `;
 
 const StyledCard = styled.div`
-  flex: 1;
+  
   background-color: #efefef;
   border: 1px solid #eee;
-  margin: 30px;
+  
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);

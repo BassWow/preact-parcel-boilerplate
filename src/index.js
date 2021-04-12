@@ -18,7 +18,7 @@ const Home = () => (
               <span class="font-semibold text-xs text-green-400">
                 What&apos;s new at Shuffle
               </span>
-              <h2 class="mt-8 mb-6 lg:mb-12 text-4xl lg:text-5xl text-gray-200 font-extrabold font-inter">
+              <h2 class="mt-8 mb-6 text-primary lg:mb-12 text-4xl lg:text-5xl text-gray-200 font-extrabold font-inter">
                 Take care of your performance every day.
               </h2>
               <div class="max-w-lg mb-6 lg:mb-12">
@@ -142,9 +142,9 @@ const Home = () => (
             </div>
           </nav>
         </div>
-        <section class="flex flex-wrap justify-center items-center">
-          {[...Array(3)].map(() => (
-            <figure class="shadow-lg rounded-xl m-2  flex-1 max-w-sm">
+        <section class="grid grid-cols-1 lg:grid-cols-4 gap-4 px-8">
+          {[...Array(4)].map(() => (
+            <figure class="shadow-lg rounded-xl">
               <blockquote class="rounded-t-xl bg-white px-6 py-8 md:p-10 text-lg md:text-xl leading-8 md:leading-8 font-semibold text-gray-900">
                 <svg
                   width="45"
@@ -159,7 +159,7 @@ const Home = () => (
                   to write normal CSS again.
                 </p>
               </blockquote>
-              <figcaption class="flex items-center space-x-4 p-6 md:px-10 md:py-6 rounded-b-xl leading-6 font-semibold text-white bg-gradient-to-br from-green-900 to-green-400">
+              <figcaption class="flex items-center space-x-4 p-6 md:px-10 md:py-6 rounded-b-xl leading-6 font-semibold text-white bg-gradient-to-br from-primary to-secondary">
                 <div class="flex-none w-14 h-14 bg-white rounded-full flex items-center justify-center">
                   <img
                     src="https://images.unsplash.com/photo-1602471615287-d733c59b79c4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
@@ -216,110 +216,43 @@ const Home = () => (
       </section>
       <section>
         <Cards>
-          <Card>
-            <div class="card__image">
-              <img src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />
-            </div>
-            <div class="card__content_container">
-              <div class="card__content_image">
-                <img src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          {[...Array(4)].map(() => (
+            <Card>
+              <div class="card__image">
+                <img src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />
               </div>
-              <div class="card__content_copy">
-                <h2>Card title</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eaque, culpa asperiores voluptatem delectus eveniet adipisci
-                  temporibus? Beatae recusandae dignissimos reiciendis est dolor
-                  eius excepturi quaerat, quia debitis doloribus velit mollitia?
-                </p>
+              <div class="card__content_container">
+                <div class="card__content_image">
+                  <img src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                </div>
+                <div class="card__content_copy">
+                  <h2>Card title</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eaque, culpa asperiores voluptatem delectus eveniet adipisci
+                    temporibus? Beatae recusandae dignissimos reiciendis est
+                    dolor eius excepturi quaerat, quia debitis doloribus velit
+                    mollitia?
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="card__links">
-              <ul>
-                <li>
-                  <StopIcon class="h-10 w-10 text-black text-center bg" />
-                </li>
+              <div class="card__links">
+                <ul>
+                  <li>
+                    <StopIcon class="h-10 w-10 text-black text-center bg" />
+                  </li>
 
-                <li>
-                  <StopIcon class="h-10 w-10 text-black" />
-                </li>
+                  <li>
+                    <StopIcon class="h-10 w-10 text-black" />
+                  </li>
 
-                <li>
-                  <StopIcon class="h-10 w-10 text-black" />
-                </li>
-              </ul>
-            </div>
-          </Card>
-
-          <Card>
-            <div class="card__image">
-              <img src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />
-            </div>
-            <div class="card__content_container">
-              <div class="card__content_image">
-                <img src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                  <li>
+                    <StopIcon class="h-10 w-10 text-black" />
+                  </li>
+                </ul>
               </div>
-              <div class="card__content_copy">
-                <h2>Card title</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eaque, culpa asperiores voluptatem delectus eveniet adipisci
-                  temporibus? Beatae recusandae dignissimos reiciendis est dolor
-                  eius excepturi quaerat, quia debitis doloribus velit mollitia?
-                </p>
-              </div>
-            </div>
-            <div class="card__links">
-              <ul>
-                <li>
-                  <StopIcon class="h-10 w-10 text-black text-center bg" />
-                </li>
-
-                <li>
-                  <StopIcon class="h-10 w-10 text-black" />
-                </li>
-
-                <li>
-                  <StopIcon class="h-10 w-10 text-black" />
-                </li>
-              </ul>
-            </div>
-          </Card>
-
-          <Card>
-            <div class="card__image">
-              <img src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />
-            </div>
-            <div class="card__content_container">
-              <div class="card__content_image">
-                <img src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-              </div>
-              <div class="card__content_copy">
-                <h2>Card title</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eaque, culpa asperiores voluptatem delectus eveniet adipisci
-                  temporibus? Beatae recusandae dignissimos reiciendis est dolor
-                  eius excepturi quaerat, quia debitis doloribus velit mollitia?
-                </p>
-              </div>
-            </div>
-            <div class="card__links">
-              <ul>
-                <li>
-                  <StopIcon class="h-10 w-10 text-black text-center bg" />
-                </li>
-
-                <li>
-                  <StopIcon class="h-10 w-10 text-black" />
-                </li>
-
-                <li>
-                  <StopIcon class="h-10 w-10 text-black" />
-                </li>
-              </ul>
-            </div>
-          </Card>
+            </Card>
+          ))}
         </Cards>
       </section>
     </div>

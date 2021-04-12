@@ -21,6 +21,10 @@ module.exports = {
         quicksand: ["Quicksand"],
         inter: ["Inter"],
       },
+      colors: {
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+      },
     },
   },
   variants: {

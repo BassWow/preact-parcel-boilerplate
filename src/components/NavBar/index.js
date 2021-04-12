@@ -118,7 +118,7 @@ export default NavBar = () => {
             </button>
 
             <div class="ml-3 relative">
-              <div>
+              <div >
                 <button
                   type="button"
                   class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
