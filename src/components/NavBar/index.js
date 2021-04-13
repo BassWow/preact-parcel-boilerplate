@@ -8,7 +8,7 @@ export default NavBar = () => {
     <nav class="bg-gray-800">
       <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <div class=" absolute inset-y-0 left-0 top-3 w-10 h-10 flex items-start sm:hidden">
             <button
               type="button"
               class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -49,6 +49,41 @@ export default NavBar = () => {
                 />
               </svg>
             </button>
+            <div
+              class="-m-2 ml-1 relative opacity-0 z-10 bg-gray-900  transition-opacity duration-300 ease-in-out  sm:hidden"
+              id="mobile-menu"
+            >
+              <div class="relative px-2 pt-2 pb-3 space-y-1">
+                <a
+                  href="#"
+                  class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                  aria-current="page"
+                >
+                  Dashboard
+                </a>
+
+                <a
+                  href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Team
+                </a>
+
+                <a
+                  href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Projects
+                </a>
+
+                <a
+                  href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Calendar
+                </a>
+              </div>
+            </div>
           </div>
           <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div class="flex-shrink-0 flex items-center">
@@ -117,15 +152,14 @@ export default NavBar = () => {
               </svg>
             </button>
 
-            <div class="ml-3 relative">
-              <div >
+            <div class="ml-3 relative" onClick={() => setOpen(!isOpen)}>
+              <div class=" w-8 h-8">
                 <button
                   type="button"
                   class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"
-                  
                 >
                   <span class="sr-only">Open user menu</span>
                   <img
@@ -134,74 +168,39 @@ export default NavBar = () => {
                     alt=""
                   />
                 </button>
-              </div>
 
-              <div
-                class={`${
-                  isOpen ? "opacity-100" : "opacity-0"
-                } z-50 transition-opacity duration-100 ease-in-out origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none`}
-                role="menu"
-                id="user-menu"
-                aria-orientation="vertical"
-                aria-labelledby="user-menu"
-              >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  role="menuitem"
+                <div
+                  class="z-50 transition-opacity duration-300 ease-in-out origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  role="menu"
+                  id="user-menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="user-menu"
                 >
-                  Your Profile
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  role="menuitem"
-                >
-                  Settings
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  role="menuitem"
-                >
-                  Sign out
-                </a>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    Your Profile
+                  </a>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    Settings
+                  </a>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    Sign out
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="hidden sm:hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-          <a
-            href="#"
-            class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-            aria-current="page"
-          >
-            Dashboard
-          </a>
-
-          <a
-            href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Team
-          </a>
-
-          <a
-            href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Projects
-          </a>
-
-          <a
-            href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Calendar
-          </a>
         </div>
       </div>
     </nav>

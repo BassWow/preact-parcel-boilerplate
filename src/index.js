@@ -1,3 +1,4 @@
+import "preact/debug";
 import { h, render } from "preact";
 import { Router } from "preact-router";
 import tw, { styled } from "twin.macro";
@@ -30,7 +31,7 @@ const Home = () => (
               </div>
               <div class="flex flex-wrap">
                 <a
-                  class="inline-block px-6 py-4 mb-3 mr-4 text-sm font-medium leading-normal bg-green-400 hover:bg-green-300 text-white rounded transition duration-200"
+                  class="inline-block px-6 py-4 mb-3 mr-4 text-sm font-medium leading-normal bg-green-400 hover:bg-green-300 text-graY-800 rounded transition duration-200"
                   href="#"
                 >
                   Track your performance
@@ -44,21 +45,13 @@ const Home = () => (
               </div>
             </div>
             <div class="relative w-full md:w-1/2 px-4">
+           
               <img
-                class="hidden lg:block lg:absolute top-0 right-0 z-10 lg:mt-28"
-                src="zeus-assets/icons/dots/yellow-dot-right-shield.svg"
+                class="mx-auto"
+                src="https://arctica.io/static/ac674e01682c0178ed33ccec1db6ca7f/application.svg"
                 alt=""
               />
-              <img
-                class="relative"
-                src="https://tailwindcomponents.com/svg/website-designer-bro.svg"
-                alt=""
-              />
-              <img
-                class="hidden lg:block lg:absolute bottom-0 lg:left-0 lg:ml-6 lg:mb-20"
-                src="zeus-assets/icons/dots/blue-dot-left-bars.svg"
-                alt=""
-              />
+             
             </div>
           </div>
         </div>
@@ -238,7 +231,7 @@ const Home = () => (
               </div>
               <div class="card__links">
                 <ul>
-                  <li>
+                  <li>s
                     <StopIcon class="h-10 w-10 text-black text-center bg" />
                   </li>
 
